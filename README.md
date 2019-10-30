@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class FinalProject {
   public static void main(String [] args) {
     Scanner input = new Scanner(System.in); 
-    
+    boolean isValid = true;
+    while (isValid) {
     //numb o fplayers
     System.out.println("Enter number of players, one or two. Not three of four: ");
     int numOfPlayers = input.nextInt();
@@ -12,6 +13,7 @@ public class FinalProject {
     if (numOfPlayers == 1) {
         System.out.println("Enter player 1's name: ");
         String player1 = input.nextLine();
+        
         
     }
     else if (numOfPlayers == 2) {
@@ -22,7 +24,10 @@ public class FinalProject {
         String player2 = input.nextLine();
         
     }
-    System.out.println("Get in looser, we're going shopping!");
+    else {
+        System.out.println("Try again, hoe!");
+    }
+    }
     
     int Number = (int)(Math.random() * 10); 
   }
