@@ -13,6 +13,7 @@ public class FinalProject {
     if (numOfPlayers == 1) {
         System.out.println("Enter player 1's name: ");
         String player1 = input.nextLine();
+		isValid = false; 
         
         
     }
@@ -22,10 +23,12 @@ public class FinalProject {
         input.nextLine();
         System.out.println("Enter player 2's name: ");
         String player2 = input.nextLine();
+		isValid = false; 
         
     }
     else {
         System.out.println("Try again, hoe!");
+		isValid = true; 
     }
     }
     
