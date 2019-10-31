@@ -6,7 +6,7 @@ public class FinalProject {
     Scanner input = new Scanner(System.in); 
     boolean isValid = true;
     while (isValid) {
-    //numb o fplayers
+    //numb of players
     System.out.println("Enter number of players, one or two. Not three of four: ");
     int numOfPlayers = input.nextInt();
     
@@ -33,5 +33,6 @@ public class FinalProject {
     }
     
     int Number = (int)(Math.random() * 10); 
+    final int NUM_OF_QUES = 10;
   }
 }
