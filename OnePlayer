@@ -1,0 +1,71 @@
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class OnePlayer {
+
+    public static void Display(String p1Name) {
+        GridPane grid;
+        Stage window;
+        Label catLabel, score;
+        Button cat1, cat2, cat3, cat4;
+        Scene scene;
+        VBox layout1Player;
+
+        grid = new GridPane();
+        grid.setPadding(new Insets(10, 10, 10, 10));
+        grid.setVgap(10);
+        grid.setHgap(10);
+
+        window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setTitle("1 player: Categories");
+        window.setMinWidth(400);
+
+        int playerScore = 0;
+
+        ArrayList<Integer> numberOrder = StartScreen.QuestionOrder();
+        for (int k = 0; k < 10; k++) {
+            int number = numberOrder.get(k);
+            AtomicBoolean correct = new AtomicBoolean(false);
+            //Label catLabel: prompt to pick category (1 player)
+            catLabel = new Label(p1Name + ": Pick one of the following categories: ");
+            cat1 = new Button("Hypebeast");
+            cat1.setOnAction(e -> {
+                correct.set(Lauren.Display(number));
+            });
+            cat2 = new Button("Memes");
+            cat2.setOnAction(e -> {
+                correct.set(Claire.Display(number));
+            });
+            cat3 = new Button("Media");
+            cat3.setOnAction(e -> {
+                correct.set(Meagan.Display(number));
+            });
+            cat4 = new Button("Science");
+            cat4.setOnAction(e -> {
+                correct.set(Lenice.Display(number));
+            });
+
+            if (correct.get()) {
+                playerScore += 1;
+            }
+            score = new Label(p1Name + "'s score: " + playerScore);
+
+            //VBox layout1Player: sets vertical layout of buttons
+            layout1Player = new VBox(20);
+            layout1Player.getChildren().addAll(catLabel, cat1, cat2, cat3, cat4, score);
+            scene = new Scene(layout1Player, 500, 350);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+    }
+}
