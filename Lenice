@@ -1,0 +1,104 @@
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class Lenice {
+    public static boolean Display(int number) {
+        GridPane grid;
+        Stage window;
+        Label Q;
+        Button A, B, C, D;
+        Scene scene;
+        VBox layout1;
+        AtomicBoolean score = new AtomicBoolean(false);
+
+        grid = new GridPane();
+        grid.setPadding(new Insets(10, 10, 10, 10));
+        grid.setVgap(10);
+        grid.setHgap(10);
+
+        window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setTitle("Category: Science");
+        window.setMinWidth(1000);
+
+        if (number == 1) {
+            Q = new Label("question?");
+            A = new Button("A");
+            A.setOnAction(e -> {
+                score.set(Lauren.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("B");
+            B.setOnAction(e -> {
+                score.set(Lauren.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("C");
+            C.setOnAction(e -> {
+                score.set(Lauren.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("D");
+            D.setOnAction(e -> {
+                score.set(Lauren.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (score.get()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static boolean Answers(int number, char answer) {
+        if (number == 1 && answer == 'A') {
+            return true;
+        }
+        if (number == 2 && answer =='D') {
+            return true;
+        }
+        if (number == 3 && answer == 'D') {
+            return true;
+        }
+        if (number == 4 && answer == 'B') {
+            return true;
+        }
+        if (number == 5 && answer == 'C') {
+            return true;
+        }
+        if (number == 6 && answer == 'D') {
+            return true;
+        }
+        if (number == 7 && answer == 'B') {
+            return true;
+        }
+        if (number == 8 && answer == 'B') {
+            return true;
+        }
+        if (number == 9 && answer == 'D') {
+            return true;
+        }
+        if (number == 0 && answer == 'C') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
