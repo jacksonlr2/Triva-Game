@@ -1,0 +1,97 @@
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class StartScreen extends Application {
+
+    Stage window;
+    GridPane grid;
+    Scene startScene;
+    Label numPlayers, catLabel, catLabela;
+    Button onePlayer, twoPlayer, cont, cat1, cat2, cat3, cat4, cat1a, cat2a, cat3a, cat4a;
+    Scene sceneCat1, sceneCat2;
+    VBox layout1Player, layout2Player;
+    String p1aName, p12Name, p1Name, p2Name, thing;
+
+    public static void main(String[] args) {
+
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Scanner input = new Scanner(System.in);
+
+        window = primaryStage;
+        window.setTitle("Trivia Game");
+
+        grid = new GridPane();
+        grid.setPadding(new Insets(10, 10, 10, 10));
+        grid.setVgap(10);
+        grid.setHgap(10);
+
+        //Label numPlayers: 1 or 2 player
+        numPlayers = new Label("Select the number of players: ");
+        GridPane.setConstraints(numPlayers, 0, 0);
+
+        //Button onePlayer & twoPlayer: creates buttons and assigns actions
+        onePlayer = new Button("1 Player");
+        twoPlayer = new Button("2 Player");
+        onePlayer.setOnAction(e -> {
+            p1Name = OnePlayerName.Display("Trivia Game: Names", "Enter name of player1: ");
+        });
+        twoPlayer.setOnAction(e -> {
+            p12Name = TwoPlayerName.Display("Trivia Game: Names", "Enter name of player1: ", "Enter name of player2: ");
+            String[] names = p12Name.split(" ");
+            p1Name = names[0];
+            p2Name = names[1];
+        });
+
+        GridPane.setConstraints(onePlayer, 0, 1);
+        GridPane.setConstraints(twoPlayer, 1, 1);
+        grid.getChildren().addAll(numPlayers, onePlayer, twoPlayer);
+
+        //Scene startScene: sets beginning scene
+        startScene = new Scene(grid, 300, 200);
+        window.setScene(startScene);
+        window.show();
+
+        //Label catLabel: prompt to pick category (2 player)
+        catLabel = new Label(p2Name + ": Pick one of the following categories: ");
+        cat1 = new Button("Hypebeast");
+        cat2 = new Button("Memes");
+        cat3 = new Button("Media");
+        cat4 = new Button("Science");
+        //VBox layout1Player: sets vertical layout of buttons
+        layout2Player = new VBox(20);
+        layout2Player.getChildren().addAll(catLabel, cat1, cat2, cat3, cat4);
+        sceneCat2 = new Scene(layout2Player, 500, 350);
+    }
+
+    public static ArrayList<Integer> QuestionOrder() {
+        ArrayList<Integer> questions = new ArrayList<Integer>();
+        //int number = (int) (Math.random() * 10);
+        for (int i = 0; i < 10; i++) {
+            questions.add(i);
+        }
+
+        Collections.shuffle(questions);
+
+        int number;
+        for (int i = 0; i < 10; i++) {
+            number = questions.get(i);
+        }
+        return questions;
+    }
+}
