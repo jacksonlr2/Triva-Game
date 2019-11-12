@@ -1,0 +1,103 @@
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class TwoPlayer {
+
+    public static void Display(String p1Name, String p2Name) {
+        GridPane grid;
+        Stage window;
+        Label catLabel, catLabel2, score1, score2;
+        Button cat1, cat2, cat3, cat4, cat1a, cat2a, cat3a, cat4a;
+        Scene scene, scene2;
+        VBox layout1Player, layout2Player;
+
+        grid = new GridPane();
+        grid.setPadding(new Insets(10, 10, 10, 10));
+        grid.setVgap(10);
+        grid.setHgap(10);
+
+        window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setTitle("2 player: Categories");
+        window.setMinWidth(400);
+
+        int player1Score = 0;
+        int player2Score = 0;
+
+        ArrayList<Integer> numberOrder = StartScreen.QuestionOrder();
+        for (int k = 0; k < 10; k++) {
+            int number = numberOrder.get(k);
+            AtomicBoolean correct = new AtomicBoolean(false);
+            //Label catLabel: prompt to pick category (2 player)
+            catLabel = new Label(p1Name + ": Pick one of the following categories: ");
+            cat1 = new Button("Hypebeast");
+            cat1.setOnAction(e -> {
+                correct.set(Lauren.Display(number));
+            });
+            cat2 = new Button("Memes");
+            cat2.setOnAction(e -> {
+                correct.set(Claire.Display(number));
+            });
+            cat3 = new Button("Media");
+            cat3.setOnAction(e -> {
+                correct.set(Meagan.Display(number));
+            });
+            cat4 = new Button("Science");
+            cat4.setOnAction(e -> {
+                correct.set(Lenice.Display(number));
+            });
+
+            score1 = new Label(p1Name + "'s score: " + player1Score);
+            if (correct.get()) {
+                player1Score += 1;
+            }
+
+            //VBox layout1Player: sets vertical layout of buttons
+            layout1Player = new VBox(20);
+            layout1Player.getChildren().addAll(catLabel, cat1, cat2, cat3, cat4, score1);
+            scene = new Scene(layout1Player, 500, 350);
+            window.setScene(scene);
+            window.showAndWait();
+
+            //Label catLabel2: prompt to pick category (2 player)
+            catLabel2 = new Label(p2Name + ": Pick one of the following categories: ");
+            cat1a = new Button("Hypebeast");
+            cat1a.setOnAction(e -> {
+                correct.set(Lauren.Display(number));
+            });
+            cat2a = new Button("Memes");
+            cat2a.setOnAction(e -> {
+                correct.set(Claire.Display(number));
+            });
+            cat3a = new Button("Media");
+            cat3a.setOnAction(e -> {
+                correct.set(Meagan.Display(number));
+            });
+            cat4a = new Button("Science");
+            cat4a.setOnAction(e -> {
+                correct.set(Lenice.Display(number));
+            });
+
+            score2 = new Label(p1Name + "'s score: " + player2Score);
+            if (correct.get()) {
+                player2Score += 1;
+            }
+
+            //VBox layout1Player: sets vertical layout of buttons
+            layout2Player = new VBox(20);
+            layout2Player.getChildren().addAll(catLabel2, cat1a, cat2a, cat3a, cat4a, score2);
+            scene2 = new Scene(layout2Player, 500, 350);
+            window.setScene(scene2);
+            window.showAndWait();
+        }
+    }
+}
