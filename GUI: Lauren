@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Lauren {
+
+    static boolean score;
+
     public static boolean Display(int number) {
         GridPane grid;
         Stage window;
@@ -17,7 +20,7 @@ public class Lauren {
         Button A, B, C, D;
         Scene scene;
         VBox layout1;
-        AtomicBoolean score = new AtomicBoolean(false);
+        //AtomicBoolean score = new AtomicBoolean(false);
 
         grid = new GridPane();
         grid.setPadding(new Insets(10, 10, 10, 10));
@@ -25,7 +28,7 @@ public class Lauren {
         grid.setHgap(10);
 
         window = new Stage();
-        window.initModality(Modality.APPLICATION_MODAL);
+        window.initModality(Modality.NONE);
         window.setTitle("Category: Hypebeast");
         window.setMinWidth(1000);
 
@@ -33,22 +36,22 @@ public class Lauren {
             Q = new Label("On Sneaker Shopping with Complex, who spent the most money and how much did they spend?");
             A = new Button("Juice Wrld - $42,032.28");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("Future - $38,971.85");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("Ozuna - $29,312.58");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("Neymar - 18.623.44");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -57,26 +60,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 2) {
+        else if (number == 2) {
             Q = new Label("What was the retail price for a red Supreme chopstick set? (StockX)");
             A = new Button("$86");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("$74");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("$67");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("$58");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -85,26 +88,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 3) {
+        else if (number == 3) {
             Q = new Label("How many different colorways are there for the Nike Air Max 97? (mens)");
             A = new Button("Less than 50");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("50 to 99");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("100 to 199");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("200 or more");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -113,26 +116,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 4) {
+        else if (number == 4) {
             Q = new Label("What’s the most expensive mens Jordan 1 and its price? (StockX)");
             A = new Button("Retro High Travis Scott - $29,000");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("OG Chicago (1985) - $28,000");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("Retro High Off-White - $24,000");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("Retro High Satin Banned - $16,000");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -141,26 +144,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 5) {
+        else if (number == 5) {
             Q = new Label("How much does the Supreme brick resell for? (StockX)");
             A = new Button("$352");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("$239");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("$193");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("$156");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -169,26 +172,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 6) {
+        else if (number == 6) {
             Q = new Label("How many different Supreme box logo sticker designs have been produced?");
             A = new Button("Less than 50");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("50 to 100");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("100 to 150");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("150 or more");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -197,26 +200,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 7) {
+        else if (number == 7) {
             Q = new Label("Who is the founder of Off-White?");
             A = new Button("Lev Tanju");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("Virgil Abloh");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("Ronnie Fieg");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("Bill Bowerman");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -225,26 +228,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 8) {
+        else if (number == 8) {
             Q = new Label("What’s the resale value for a pair of Nike Air Mags?");
             A = new Button("$62,740");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("$56,180");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("$49,950");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("$42,280");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -253,26 +256,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 9) {
+        else if (number == 9) {
             Q = new Label("What is f.o.g.?");
             A = new Button("A visible aerosol consisting of tiny water droplets or ice crystals suspended in the " + "\n" + "air near the earths surface");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("An environmental agency that has also become known for their T-shirts");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("A religious group, named “Fear of God” that’s focused on spreading his word to the " + "\n" + "youth via fear tactics");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("A clothing brand named “Fear of God” that really has nothing to do with religion");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -281,30 +284,26 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-        if (number == 0) {
+        else if (number == 0) {
             Q = new Label("What brand has Off-White not collaborated with?");
             A = new Button("Nike");
             A.setOnAction(e -> {
-                char L = 'A';
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
             });
             B = new Button("Timberland");
             B.setOnAction(e -> {
-                char L = 'B';
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
             });
             C = new Button("Supreme");
             C.setOnAction(e -> {
-                char L = 'C';
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
             });
             D = new Button("Ikea");
             D.setOnAction(e -> {
-                char L = 'D';
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
             });
             layout1 = new VBox(20);
@@ -313,44 +312,38 @@ public class Lauren {
             window.setScene(scene);
             window.showAndWait();
         }
-
-        if (score.get()) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return score;
     }
 
     public static boolean Answers(int number, char answer) {
         if (number == 1 && answer == 'A') {
             return true;
         }
-        if (number == 2 && answer =='D') {
+        else if (number == 2 && answer =='D') {
             return true;
         }
-        if (number == 3 && answer == 'D') {
+        else if (number == 3 && answer == 'D') {
             return true;
         }
-        if (number == 4 && answer == 'B') {
+        else if (number == 4 && answer == 'B') {
             return true;
         }
-        if (number == 5 && answer == 'C') {
+        else if (number == 5 && answer == 'C') {
             return true;
         }
-        if (number == 6 && answer == 'D') {
+        else if (number == 6 && answer == 'D') {
             return true;
         }
-        if (number == 7 && answer == 'B') {
+        else if (number == 7 && answer == 'B') {
             return true;
         }
-        if (number == 8 && answer == 'B') {
+        else if (number == 8 && answer == 'B') {
             return true;
         }
-        if (number == 9 && answer == 'D') {
+        else if (number == 9 && answer == 'D') {
             return true;
         }
-        if (number == 0 && answer == 'C') {
+        else if (number == 0 && answer == 'C') {
             return true;
         }
         else {
