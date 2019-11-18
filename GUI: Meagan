@@ -30,25 +30,286 @@ public class Meagan {
         window.setMinWidth(1000);
 
         if (number == 1) {
-            Q = new Label("question?");
-            A = new Button("A");
+            Q = new Label("What is the name of the movie that Michael Scott makes in The Office?");
+            A = new Button("Threat Level Midnight");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score.set(Meagan.Answers(number, 'A'));
                 window.close();
             });
-            B = new Button("B");
+            B = new Button("The Office: An American Workplace");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score.set(Meagan.Answers(number, 'B'));
                 window.close();
             });
-            C = new Button("C");
+            C = new Button("Battlestar Galactica");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score.set(Meagan.Answers(number, 'C'));
                 window.close();
             });
-            D = new Button("D");
+            D = new Button("The Dundies");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 2) {
+            Q = new Label("What was the name of Friends before it was called \'Friends\'?");
+            A = new Button("Central Perk");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Six of One");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("The One");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("None of the above, Friends was the only name for the show");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 3) {
+            Q = new Label("What kind of dog is Brian from Family Guy?");
+            A = new Button("Beagle");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Mutt");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("Bulldog");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("Labrador");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 4) {
+            Q = new Label("What is Rick's \"universe number\" in Rick and Morty?");
+            A = new Button("C-133");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("C-137");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("C-139");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("C-142");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 5) {
+            Q = new Label("In the season \'Freak Show\' of American Horror Story, what is the name of the killer clown?");
+            A = new Button("Pogo");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Rusty");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("Twisty");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("Bozo");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 6) {
+            Q = new Label("According to the episode \'Mrs. Puff, You're Fired\', how many times has Spongebob failed the boating exam?");
+            A = new Button("25");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("69");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("420");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("1,258,056");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 7) {
+            Q = new Label("What is Leslie Knope's favorite food in Parks and Recreation?");
+            A = new Button("Waffles");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Pancakes");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("French toast");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("Eggs");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 8) {
+            Q = new Label("How does Joyce communicate with her missing son, Will, in season one of Stranger Things?");
+            A = new Button("Christmas lights");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Oujia board");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("Her phone");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("A tree");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 9) {
+            Q = new Label("Which of the following is the first Pokemon that Ash catches?");
+            A = new Button("Pidgie");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Squirtle");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("Pikachu");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("Caterpie");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
+                window.close();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+        }
+
+        if (number == 0) {
+            Q = new Label("Who is Andrew's hormone monster in Big Mouth?");
+            A = new Button("Rick");
+            A.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'A'));
+                window.close();
+            });
+            B = new Button("Morty");
+            B.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'B'));
+                window.close();
+            });
+            C = new Button("Maurice");
+            C.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'C'));
+                window.close();
+            });
+            D = new Button("Steve");
+            D.setOnAction(e -> {
+                score.set(Meagan.Answers(number, 'D'));
                 window.close();
             });
             layout1 = new VBox(20);
@@ -60,8 +321,7 @@ public class Meagan {
 
         if (score.get()) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
@@ -70,7 +330,7 @@ public class Meagan {
         if (number == 1 && answer == 'A') {
             return true;
         }
-        if (number == 2 && answer =='D') {
+        if (number == 2 && answer == 'B') {
             return true;
         }
         if (number == 3 && answer == 'D') {
@@ -85,10 +345,10 @@ public class Meagan {
         if (number == 6 && answer == 'D') {
             return true;
         }
-        if (number == 7 && answer == 'B') {
+        if (number == 7 && answer == 'A') {
             return true;
         }
-        if (number == 8 && answer == 'B') {
+        if (number == 8 && answer == 'A') {
             return true;
         }
         if (number == 9 && answer == 'D') {
@@ -96,8 +356,7 @@ public class Meagan {
         }
         if (number == 0 && answer == 'C') {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
