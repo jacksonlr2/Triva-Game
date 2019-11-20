@@ -3,10 +3,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -18,11 +15,8 @@ public class StartScreen extends Application {
     Stage window;
     GridPane grid;
     Scene startScene;
-    Label numPlayers, catLabel, catLabela;
-    Button onePlayer, twoPlayer, cont, cat1, cat2, cat3, cat4, cat1a, cat2a, cat3a, cat4a;
-    Scene sceneCat1, sceneCat2;
-    VBox layout1Player, layout2Player;
-    String p1aName, p12Name, p1Name, p2Name, thing;
+    Label numPlayers;
+    Button onePlayer, twoPlayer;
 
     public static void main(String[] args) {
 
@@ -47,15 +41,14 @@ public class StartScreen extends Application {
 
         //Button onePlayer & twoPlayer: creates buttons and assigns actions
         onePlayer = new Button("1 Player");
-        twoPlayer = new Button("2 Player");
         onePlayer.setOnAction(e -> {
-            p1Name = OnePlayerName.Display("Trivia Game: Names", "Enter name of player1: ");
+            window.hide();
+            OnePlayerName.Display("Trivia Game: Names", "Enter name of player1: ");
         });
+        twoPlayer = new Button("2 Player");
         twoPlayer.setOnAction(e -> {
-            p12Name = TwoPlayerName.Display("Trivia Game: Names", "Enter name of player1: ", "Enter name of player2: ");
-            String[] names = p12Name.split(" ");
-            p1Name = names[0];
-            p2Name = names[1];
+            window.hide();
+            TwoPlayerName.Display("Trivia Game: Names", "Enter name of player1: ", "Enter name of player2: ");
         });
 
         GridPane.setConstraints(onePlayer, 0, 1);
@@ -66,17 +59,6 @@ public class StartScreen extends Application {
         startScene = new Scene(grid, 300, 200);
         window.setScene(startScene);
         window.show();
-
-        //Label catLabel: prompt to pick category (2 player)
-        catLabel = new Label(p2Name + ": Pick one of the following categories: ");
-        cat1 = new Button("Hypebeast");
-        cat2 = new Button("Memes");
-        cat3 = new Button("Media");
-        cat4 = new Button("Science");
-        //VBox layout1Player: sets vertical layout of buttons
-        layout2Player = new VBox(20);
-        layout2Player.getChildren().addAll(catLabel, cat1, cat2, cat3, cat4);
-        sceneCat2 = new Scene(layout2Player, 500, 350);
     }
 
     public static ArrayList<Integer> QuestionOrder() {
