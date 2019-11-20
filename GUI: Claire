@@ -34,22 +34,22 @@ public class Claire {
             Q = new Label("What day was the Area 51 raid?");
             A = new Button("September 20, 2019");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("September 15, 2019");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("September 18, 2019");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("September 25, 2019");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -62,22 +62,22 @@ public class Claire {
             Q = new Label("What day is it my dudes?");
             A = new Button("Monday");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Tuesday");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Wednesday");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Thursday");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -90,22 +90,22 @@ public class Claire {
             Q = new Label("What is the name of the Gorilla that died May 28, 2016?");
             A = new Button("Harambe");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Harold");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Harry");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Harrison");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -118,22 +118,22 @@ public class Claire {
             Q = new Label("What does dat boi ride?");
             A = new Button("Bicycle");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Tricycle");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Moped");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Unicycle");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -146,22 +146,22 @@ public class Claire {
             Q = new Label("...and they were ________");
             A = new Button("Sisters");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("$Roommates");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Siblings");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Married");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -174,22 +174,22 @@ public class Claire {
             Q = new Label("Damn Daniel back at it again with the _________");
             A = new Button("Red Pumas");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("White Vans");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Black Nikes");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Blue Convers");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -202,22 +202,22 @@ public class Claire {
             Q = new Label("Who is making the fist?");
             A = new Button("Arthur");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Bart Simpson");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Steven Universe");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Timmy Turner");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -230,22 +230,22 @@ public class Claire {
             Q = new Label("Is this a ______?");
             A = new Button("Pidgeon");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Duck");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Butterfly");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Robin");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -258,22 +258,22 @@ public class Claire {
             Q = new Label("What emotion is this cat?");
             A = new Button("Angry");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Mad");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Sad");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Grumpy");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
@@ -286,22 +286,22 @@ public class Claire {
             Q = new Label("Hurricane Katrina?  More like Hurricane ________");
             A = new Button("Harambe");
             A.setOnAction(e -> {
-                score = Lauren.Answers(number, 'A');
+                score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Tortilla");
             B.setOnAction(e -> {
-                score = Lauren.Answers(number, 'B');
+                score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Hurricane");
             C.setOnAction(e -> {
-                score = Lauren.Answers(number, 'C');
+                score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Chicken");
             D.setOnAction(e -> {
-                score = Lauren.Answers(number, 'D');
+                score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
