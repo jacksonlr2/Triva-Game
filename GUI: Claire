@@ -1,23 +1,22 @@
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.util.concurrent.atomic.AtomicBoolean;
+import javafx.stage.WindowEvent;
 
 public class Claire {
+
+    static boolean score;
+
     public static boolean Display(int number) {
         GridPane grid;
         Stage window;
+        Stage windowL;
         Label Q;
         Button A, B, C, D;
         Scene scene;
         VBox layout1;
-        AtomicBoolean score = new AtomicBoolean(false);
 
         grid = new GridPane();
         grid.setPadding(new Insets(10, 10, 10, 10));
@@ -25,76 +24,387 @@ public class Claire {
         grid.setHgap(10);
 
         window = new Stage();
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle("Category: Memes");
+        window.initModality(Modality.NONE);
+        window.setTitle("Category: Hypebeast");
         window.setMinWidth(1000);
+        windowL = new Stage();
+        windowL.initModality(Modality.NONE);
+        windowL.setTitle("Category: Hypebeast");
+        windowL.setMinWidth(1000);
 
         if (number == 1) {
-            Q = new Label("question?");
-            A = new Button("A");
+            Q = new Label("What day was the Area 51 raid?");
+            A = new Button("September 20, 2019");
             A.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'A'));
+                score = Lauren.Answers(number, 'A');
                 window.close();
+                windowL.hide();
             });
-            B = new Button("B");
+            B = new Button("September 15, 2019");
             B.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'B'));
+                score = Lauren.Answers(number, 'B');
                 window.close();
+                windowL.hide();
             });
-            C = new Button("C");
+            C = new Button("September 18, 2019");
             C.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'C'));
+                score = Lauren.Answers(number, 'C');
                 window.close();
+                windowL.hide();
             });
-            D = new Button("D");
+            D = new Button("September 25, 2019");
             D.setOnAction(e -> {
-                score.set(Lauren.Answers(number, 'D'));
+                score = Lauren.Answers(number, 'D');
                 window.close();
+                windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
             window.setScene(scene);
             window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 2) {
+            Q = new Label("What day is it my dudes?");
+            A = new Button("Monday");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Tuesday");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Wednesday");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Thursday");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 3) {
+            Q = new Label("What is the name of the Gorilla that died May 28, 2016?");
+            A = new Button("Harambe");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Harold");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Harry");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Harrison");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 4) {
+            Q = new Label("What does dat boi ride?");
+            A = new Button("Bicycle");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Tricycle");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Moped");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Unicycle");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 5) {
+            Q = new Label("...and they were ________");
+            A = new Button("Sisters");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Roommates");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Siblings");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Married");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 6) {
+            Q = new Label("Damn Daniel back at it again with the _________");
+            A = new Button("Red Pumas");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("White Vans");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Black Nikes");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Blue Converse");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 7) {
+            Q = new Label("Who is making the fist?");
+            A = new Button("Arthur");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Bart Simpson");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Steven Universe");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Timmy Turner");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 8) {
+            Q = new Label("Is this a ______?");
+            A = new Button("Pidgeon");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Duck");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Butterfly");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Robbin");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 9) {
+            Q = new Label("What emotion is this cat?");
+            A = new Button("Angry");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Mad");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Sad");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Grumpy");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
+        }
+        else if (number == 0) {
+            Q = new Label("Hurricane Katrina?  More like Hurricane ________");
+            A = new Button("Harambe");
+            A.setOnAction(e -> {
+                score = Lauren.Answers(number, 'A');
+                window.close();
+                windowL.hide();
+            });
+            B = new Button("Tortilla");
+            B.setOnAction(e -> {
+                score = Lauren.Answers(number, 'B');
+                window.close();
+                windowL.hide();
+            });
+            C = new Button("Hurricane");
+            C.setOnAction(e -> {
+                score = Lauren.Answers(number, 'C');
+                window.close();
+                windowL.hide();
+            });
+            D = new Button("Chicken");
+            D.setOnAction(e -> {
+                score = Lauren.Answers(number, 'D');
+                window.close();
+                windowL.hide();
+            });
+            layout1 = new VBox(20);
+            layout1.getChildren().addAll(Q, A, B, C, D);
+            scene = new Scene(layout1, 800, 500);
+            window.setScene(scene);
+            window.showAndWait();
+            windowL.setScene(scene);
+            windowL.showAndWait();
         }
 
-        if (score.get()) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return score;
     }
 
     public static boolean Answers(int number, char answer) {
         if (number == 1 && answer == 'A') {
             return true;
         }
-        if (number == 2 && answer =='D') {
+        else if (number == 2 && answer =='C') {
             return true;
         }
-        if (number == 3 && answer == 'D') {
+        else if (number == 3 && answer == 'A') {
             return true;
         }
-        if (number == 4 && answer == 'B') {
+        else if (number == 4 && answer == 'D') {
             return true;
         }
-        if (number == 5 && answer == 'C') {
+        else if (number == 5 && answer == 'B') {
             return true;
         }
-        if (number == 6 && answer == 'D') {
+        else if (number == 6 && answer == 'B') {
             return true;
         }
-        if (number == 7 && answer == 'B') {
+        else if (number == 7 && answer == 'A') {
             return true;
         }
-        if (number == 8 && answer == 'B') {
+        else if (number == 8 && answer == 'B') {
             return true;
         }
-        if (number == 9 && answer == 'D') {
+        else if (number == 9 && answer == 'D') {
             return true;
         }
-        if (number == 0 && answer == 'C') {
+        else if (number == 0 && answer == 'B') {
             return true;
         }
         else {
