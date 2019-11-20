@@ -1,8 +1,11 @@
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 import javafx.stage.WindowEvent;
 
 public class Claire {
@@ -11,7 +14,6 @@ public class Claire {
 
     public static boolean Display(int number) {
         GridPane grid;
-        Stage window;
         Stage windowL;
         Label Q;
         Button A, B, C, D;
@@ -23,13 +25,9 @@ public class Claire {
         grid.setVgap(10);
         grid.setHgap(10);
 
-        window = new Stage();
-        window.initModality(Modality.NONE);
-        window.setTitle("Category: Hypebeast");
-        window.setMinWidth(1000);
         windowL = new Stage();
         windowL.initModality(Modality.NONE);
-        windowL.setTitle("Category: Hypebeast");
+        windowL.setTitle("Category: Meme");
         windowL.setMinWidth(1000);
 
         if (number == 1) {
@@ -37,32 +35,26 @@ public class Claire {
             A = new Button("September 20, 2019");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("September 15, 2019");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("September 18, 2019");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("September 25, 2019");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -71,32 +63,26 @@ public class Claire {
             A = new Button("Monday");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Tuesday");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Wednesday");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Thursday");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -105,32 +91,26 @@ public class Claire {
             A = new Button("Harambe");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Harold");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Harry");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Harrison");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -139,32 +119,26 @@ public class Claire {
             A = new Button("Bicycle");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Tricycle");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Moped");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Unicycle");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -173,32 +147,26 @@ public class Claire {
             A = new Button("Sisters");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
-            B = new Button("Roommates");
+            B = new Button("$Roommates");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Siblings");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Married");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -207,32 +175,26 @@ public class Claire {
             A = new Button("Red Pumas");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("White Vans");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Black Nikes");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
-            D = new Button("Blue Converse");
+            D = new Button("Blue Convers");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -241,32 +203,26 @@ public class Claire {
             A = new Button("Arthur");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Bart Simpson");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Steven Universe");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Timmy Turner");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -275,32 +231,26 @@ public class Claire {
             A = new Button("Pidgeon");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Duck");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Butterfly");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
-            D = new Button("Robbin");
+            D = new Button("Robin");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -309,32 +259,26 @@ public class Claire {
             A = new Button("Angry");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Mad");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Sad");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Grumpy");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
@@ -343,40 +287,34 @@ public class Claire {
             A = new Button("Harambe");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
-                window.close();
                 windowL.hide();
             });
             B = new Button("Tortilla");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
-                window.close();
                 windowL.hide();
             });
             C = new Button("Hurricane");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
-                window.close();
                 windowL.hide();
             });
             D = new Button("Chicken");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
-                window.close();
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
             scene = new Scene(layout1, 800, 500);
-            window.setScene(scene);
-            window.showAndWait();
             windowL.setScene(scene);
             windowL.showAndWait();
         }
-
+        
         return score;
     }
 
-    public static boolean Answers(int number, char answer) {
+        public static boolean Answers(int number, char answer) {
         if (number == 1 && answer == 'A') {
             return true;
         }
