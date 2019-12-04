@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -5,6 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.util.ArrayList;
@@ -18,7 +22,7 @@ public class OnePlayer {
     public static void Display(String p1Name) {
         GridPane grid;
         Label catLabel, score;
-        Button cat1, cat2, cat3, cat4;
+
         Scene scene;
         VBox layout1Player;
 
@@ -32,28 +36,63 @@ public class OnePlayer {
         window.setTitle("1 player: Categories");
         window.setMinWidth(400);
 
+        final String IDLE_BUTTON_STYLE = "-fx-background-color: black;" +
+                "-fx-text-fill: white;" +
+                "-fx-border-style: solid inside;" +
+                "-fx-border-width: 2;" +
+                "-fx-border-insets: 0;" +
+                "-fx-border-radius: 5;" +
+                "-fx-border-color: #87CEFA;";
+        final String HOVERED_BUTTON_STYLE = "-fx-background-color: black;" +
+                "-fx-shadow-highlight-color: black;" +
+                "-fx-text-fill: white;" +
+                "-fx-border-style: solid inside;" +
+                "-fx-border-width: 2;" +
+                "-fx-border-insets: 0;" +
+                "-fx-border-radius: 5;" +
+                "-fx-border-color: #7CFC00";
+
         ArrayList<Integer> numberOrder = StartScreen.QuestionOrder();
         for (int k = 0; k < 10; k++) {
             int number = numberOrder.get(k);
 
             //Label catLabel: prompt to pick category (1 player)
             catLabel = new Label("Question " + (k + 1) + ": " + p1Name + ": Pick one of the following categories: ");
-            cat1 = new Button("Hypebeast");
+            catLabel.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            catLabel.setTextFill(Color.WHITE);
+            final Button cat1 = new Button("Hypebeast");
+
+            cat1.setStyle(IDLE_BUTTON_STYLE);
+            cat1.setOnMouseEntered(e -> cat1.setStyle(HOVERED_BUTTON_STYLE));
+            cat1.setOnMouseExited(e -> cat1.setStyle(IDLE_BUTTON_STYLE));
+
             cat1.setOnAction(e -> {
                 window.hide();
                 correct = Lauren.Display(number);
             });
-            cat2 = new Button("Memes");
+            final Button cat2 = new Button("Memes");
+            cat2.setStyle(IDLE_BUTTON_STYLE);
+            cat2.setOnMouseEntered(e -> cat2.setStyle(HOVERED_BUTTON_STYLE));
+            cat2.setOnMouseExited(e -> cat2.setStyle(IDLE_BUTTON_STYLE));
+
             cat2.setOnAction(e -> {
                 window.hide();
                 correct = Claire.Display(number);
             });
-            cat3 = new Button("Media");
+            final Button cat3 = new Button("Media");
+            cat3.setStyle(IDLE_BUTTON_STYLE);
+            cat3.setOnMouseEntered(e -> cat3.setStyle(HOVERED_BUTTON_STYLE));
+            cat3.setOnMouseExited(e -> cat3.setStyle(IDLE_BUTTON_STYLE));
+
             cat3.setOnAction(e -> {
                 window.hide();
                 correct = Meagan.Display(number);
             });
-            cat4 = new Button("Science");
+            final Button cat4 = new Button("Science");
+            cat4.setStyle(IDLE_BUTTON_STYLE);
+            cat4.setOnMouseEntered(e -> cat4.setStyle(HOVERED_BUTTON_STYLE));
+            cat4.setOnMouseExited(e -> cat4.setStyle(IDLE_BUTTON_STYLE));
+
             cat4.setOnAction(e -> {
                 window.hide();
                 correct = Lenice.Display(number);
@@ -64,26 +103,72 @@ public class OnePlayer {
             }
 
             score = new Label(p1Name + "'s score: " + playerScore);
-
+            score.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            score.setTextFill(Color.WHITE);
             //VBox layout1Player: sets vertical layout of buttons
             layout1Player = new VBox(20);
             layout1Player.getChildren().addAll(catLabel, cat1, cat2, cat3, cat4, score);
+
+            layout1Player.setStyle("-fx-padding: 10;" +
+                    "-fx-border-style: dotted;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 5;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;" +
+                    "-fx-background-color: linear-gradient(to bottom, black, #191970);");
             scene = new Scene(layout1Player, 500, 350);
             window.setScene(scene);
             window.showAndWait();
         }
 
         Label pScore = new Label(p1Name + "'s score was " + playerScore);
-        Label endMessage = new Label("Yayyyyy!!! You finished the game!" + "\n" + "Wanna play again?" + "\n" + "Close the program and run it again! :)");
+        pScore.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        pScore.setTextFill(Color.WHITE);
+        Label endMessage = new Label("Yayyyyy!!! You finished the game!" + "\n" + "Wanna play again?");
+        endMessage.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        endMessage.setTextFill(Color.WHITE);
+
+        final Button yesLoop = new Button("Play again");
+
+        yesLoop.setStyle(IDLE_BUTTON_STYLE);
+        yesLoop.setOnMouseEntered(e -> yesLoop.setStyle(HOVERED_BUTTON_STYLE));
+        yesLoop.setOnMouseExited(e -> yesLoop.setStyle(IDLE_BUTTON_STYLE));
+
+        yesLoop.setOnAction(e -> {
+            window.close();
+            Platform.runLater(() -> {
+                try {
+                    playerScore = 0;
+                    new StartScreen().start(new Stage());
+                }
+                catch (Exception ex){
+                    ex.printStackTrace();
+                }
+            });
+        });
+        final Button noLoop = new Button( "Exit game");
+
+        noLoop.setStyle(IDLE_BUTTON_STYLE);
+        noLoop.setOnMouseEntered(e -> noLoop.setStyle(HOVERED_BUTTON_STYLE));
+        noLoop.setOnMouseExited(e -> noLoop.setStyle(IDLE_BUTTON_STYLE));
+
+        noLoop.setOnAction(e -> {
+            Platform.exit();
+        });
+
         VBox endLayout = new VBox(20);
         endLayout.setAlignment(Pos.CENTER);
-        endLayout.getChildren().addAll(pScore, endMessage);
+        endLayout.getChildren().addAll(pScore, endMessage, yesLoop, noLoop);
+        endLayout.setStyle("-fx-padding: 10;" +
+                "-fx-border-style: dotted;" +
+                "-fx-border-width: 2;" +
+                "-fx-border-insets: 5;" +
+                "-fx-border-radius: 5;" +
+                "-fx-border-color: #87CEFA;" +
+                "-fx-background-color: linear-gradient(to bottom, black, #191970);");
         Scene scene1 = new Scene(endLayout, 500, 500);
         window.setScene(scene1);
         window.show();
 
-        System.out.println("Yayyyyy!!! You finished the game!");
-        System.out.println("Wanna play again?");
-        System.out.println("Then close the program and run it again! :)");
     }
 }
