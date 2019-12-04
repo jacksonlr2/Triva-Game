@@ -4,6 +4,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -28,293 +31,643 @@ public class Claire {
         windowL = new Stage();
         windowL.initModality(Modality.NONE);
         windowL.setTitle("Category: Meme");
-        windowL.setMinWidth(1000);
+        windowL.setMinWidth(700);
 
         if (number == 1) {
             Q = new Label("What day was the Area 51 raid?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("September 20, 2019");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("September 15, 2019");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("September 18, 2019");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("September 25, 2019");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 2) {
             Q = new Label("What day is it my dudes?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Monday");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Tuesday");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Wednesday");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Thursday");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 3) {
             Q = new Label("What is the name of the Gorilla that died May 28, 2016?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Harambe");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Harold");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Harry");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Harrison");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 4) {
             Q = new Label("What does dat boi ride?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Bicycle");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Tricycle");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Moped");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Unicycle");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 5) {
             Q = new Label("...and they were ________");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Sisters");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("$Roommates");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Siblings");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Married");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 6) {
             Q = new Label("Damn Daniel back at it again with the _________");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Red Pumas");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("White Vans");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Black Nikes");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Blue Convers");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 7) {
             Q = new Label("Who is making the fist?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Arthur");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Bart Simpson");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Steven Universe");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Timmy Turner");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 8) {
             Q = new Label("Is this a ______?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Pidgeon");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Duck");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Butterfly");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Robin");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 9) {
             Q = new Label("What emotion is this cat?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Angry");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Mad");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Sad");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Grumpy");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 0) {
             Q = new Label("Hurricane Katrina?  More like Hurricane ________");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Harambe");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
+
             A.setOnAction(e -> {
                 score = Claire.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Tortilla");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Claire.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Hurricane");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Claire.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Chicken");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
+
             D.setOnAction(e -> {
                 score = Claire.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
-        
+
         return score;
     }
 
-        public static boolean Answers(int number, char answer) {
+    public static boolean Answers(int number, char answer) {
         if (number == 1 && answer == 'A') {
             return true;
         }
