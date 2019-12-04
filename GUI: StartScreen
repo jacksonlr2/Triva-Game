@@ -4,6 +4,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -37,15 +40,42 @@ public class StartScreen extends Application {
 
         //Label numPlayers: 1 or 2 player
         numPlayers = new Label("Select the number of players: ");
+        numPlayers.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+        numPlayers.setTextFill(Color.WHITE);
         GridPane.setConstraints(numPlayers, 0, 0);
 
         //Button onePlayer & twoPlayer: creates buttons and assigns actions
         onePlayer = new Button("1 Player");
+        final String IDLE_BUTTON_STYLE = "-fx-background-color: black;" +
+                "-fx-text-fill: white;" +
+                "-fx-border-style: solid inside;" +
+                "-fx-border-width: 2;" +
+                "-fx-border-insets: 0;" +
+                "-fx-border-radius: 5;" +
+                "-fx-border-color: #87CEFA;";
+        final String HOVERED_BUTTON_STYLE = "-fx-background-color: black;" +
+                "-fx-shadow-highlight-color: black;" +
+                "-fx-text-fill: white;" +
+                "-fx-border-style: solid inside;" +
+                "-fx-border-width: 2;" +
+                "-fx-border-insets: 0;" +
+                "-fx-border-radius: 5;" +
+                "-fx-border-color: #7CFC00";
+
+        onePlayer.setStyle(IDLE_BUTTON_STYLE);
+        onePlayer.setOnMouseEntered(e -> onePlayer.setStyle(HOVERED_BUTTON_STYLE));
+        onePlayer.setOnMouseExited(e -> onePlayer.setStyle(IDLE_BUTTON_STYLE));
+
         onePlayer.setOnAction(e -> {
             window.hide();
             OnePlayerName.Display("Trivia Game: Names", "Enter name of player1: ");
         });
         twoPlayer = new Button("2 Player");
+
+        twoPlayer.setStyle(IDLE_BUTTON_STYLE);
+        twoPlayer.setOnMouseEntered(e -> twoPlayer.setStyle(HOVERED_BUTTON_STYLE));
+        twoPlayer.setOnMouseExited(e -> twoPlayer.setStyle(IDLE_BUTTON_STYLE));
+
         twoPlayer.setOnAction(e -> {
             window.hide();
             TwoPlayerName.Display("Trivia Game: Names", "Enter name of player1: ", "Enter name of player2: ");
@@ -56,6 +86,7 @@ public class StartScreen extends Application {
         grid.getChildren().addAll(numPlayers, onePlayer, twoPlayer);
 
         //Scene startScene: sets beginning scene
+        grid.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
         startScene = new Scene(grid, 300, 200);
         window.setScene(startScene);
         window.show();
