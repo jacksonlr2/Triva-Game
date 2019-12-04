@@ -4,6 +4,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -28,289 +31,599 @@ public class Lauren {
         windowL = new Stage();
         windowL.initModality(Modality.NONE);
         windowL.setTitle("Category: Hypebeast");
-        windowL.setMinWidth(1000);
+        windowL.setMinWidth(700);
 
         if (number == 1) {
             Q = new Label("On Sneaker Shopping with Complex, who spent the most money and how much did they spend?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Juice Wrld - $42,032.28");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Future - $38,971.85");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Ozuna - $29,312.58");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Neymar - 18.623.44");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 2) {
             Q = new Label("What was the retail price for a red Supreme chopstick set? (StockX)");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("$86");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("$74");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("$67");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("$58");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 3) {
             Q = new Label("How many different colorways are there for the Nike Air Max 97? (mens)");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Less than 50");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("50 to 99");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("100 to 199");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("200 or more");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 4) {
             Q = new Label("What’s the most expensive mens Jordan 1 and its price? (StockX)");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Retro High Travis Scott - $29,000");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("OG Chicago (1985) - $28,000");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Retro High Off-White - $24,000");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Retro High Satin Banned - $16,000");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 5) {
             Q = new Label("How much does the Supreme brick resell for? (StockX)");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("$352");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("$239");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("$193");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("$156");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 6) {
             Q = new Label("How many different Supreme box logo sticker designs have been produced?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Less than 50");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("50 to 100");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("100 to 150");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("150 or more");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 7) {
             Q = new Label("Who is the founder of Off-White?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Lev Tanju");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Virgil Abloh");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Ronnie Fieg");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Bill Bowerman");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 8) {
             Q = new Label("What’s the resale value for a pair of Nike Air Mags?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("$62,740");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("$56,180");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("$49,950");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("$42,280");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
         else if (number == 9) {
             Q = new Label("What is f.o.g.?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("A visible aerosol consisting of tiny water droplets or ice crystals suspended in the " + "\n" + "air near the earths surface");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("An environmental agency that has also become known for their T-shirts");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("A religious group, named “Fear of God” that’s focused on spreading his word to the " + "\n" + "youth via fear tactics");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("A clothing brand named “Fear of God” that really has nothing to do with religion");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
-        else if (number == 0) {
+        else {
             Q = new Label("What brand has Off-White not collaborated with?");
+            Q.setFont(Font.font("Verdana", FontWeight.BOLD, 12));
+            Q.setTextFill(Color.WHITE);
             A = new Button("Nike");
+            A.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             A.setOnAction(e -> {
                 score = Lauren.Answers(number, 'A');
                 windowL.hide();
             });
             B = new Button("Timberland");
+            B.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             B.setOnAction(e -> {
                 score = Lauren.Answers(number, 'B');
                 windowL.hide();
             });
             C = new Button("Supreme");
+            C.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             C.setOnAction(e -> {
                 score = Lauren.Answers(number, 'C');
                 windowL.hide();
             });
             D = new Button("Ikea");
+            D.setStyle("-fx-background-color: black;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-style: solid inside;" +
+                    "-fx-border-width: 2;" +
+                    "-fx-border-insets: 0;" +
+                    "-fx-border-radius: 5;" +
+                    "-fx-border-color: #87CEFA;");
             D.setOnAction(e -> {
                 score = Lauren.Answers(number, 'D');
                 windowL.hide();
             });
             layout1 = new VBox(20);
             layout1.getChildren().addAll(Q, A, B, C, D);
-            scene = new Scene(layout1, 800, 500);
+            layout1.setStyle("-fx-background-color: linear-gradient(to bottom, black, #191970);");
+            scene = new Scene(layout1, 500, 350);
             windowL.setScene(scene);
             windowL.showAndWait();
         }
-        
+
         return score;
     }
 
